@@ -31,7 +31,7 @@ logging:
   max-history: 7
   max-size: 10MB
  level:
-  ncc.nemu.main: info
+  study.springcloud.main: info
   
 profileText: dev
 commentText: hello api server, i am dev !
@@ -48,7 +48,7 @@ logging:
   max-history: 7
   max-size: 10MB
  level:
-  ncc.nemu.main: error
+  study.springcloud.main: error
   
 profileText: prod
 commentText: hello api server, i am production !
