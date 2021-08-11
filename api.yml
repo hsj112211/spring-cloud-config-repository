@@ -1,0 +1,55 @@
+# 참고 블로그 https://1minute-before6pm.tistory.com/12
+spring:
+ profiles:
+  group:
+   "dev" : "dev,common"
+
+---
+spring:
+ profiles:
+  group:
+   "prod" : "prod,common"
+
+---
+spring:
+ profiles:
+  group:
+   "common" : "common"
+
+server:
+ port: 9000
+   
+---
+spring:
+ config:
+  activate:
+   on-profile: "dev"
+   
+logging:
+ file:
+  name: ${user.dir}/log/test.log # api/log/
+  max-history: 7
+  max-size: 10MB
+ level:
+  ncc.nemu.main: info
+  
+profileText: dev
+commentText: hello api server, i am dev !
+  
+---
+spring:
+ config:
+  activate:
+   on-profile: "prod"
+   
+logging:
+ file:
+  name: ${user.dir}/log/test.log # api/log/
+  max-history: 7
+  max-size: 10MB
+ level:
+  ncc.nemu.main: error
+  
+profileText: prod
+commentText: hello api server, i am production !
+  
